@@ -30,12 +30,13 @@
       {
          SuspendLayout();
          // 
-         // Form1
+         // FormOne
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(684, 461);
-         Name = "Form1";
+         Name = "FormOne";
+         StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          Text = "Form1";
          ResumeLayout(false);
       }
