@@ -1,1 +1,1 @@
-# SyncServerWinForms
+# Синхронный Json сервер Windows Forms
