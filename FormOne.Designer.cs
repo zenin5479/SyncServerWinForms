@@ -37,7 +37,7 @@
          ClientSize = new System.Drawing.Size(684, 461);
          Name = "FormOne";
          StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-         Text = "Form1";
+         Text = "Синхронный Json сервер Windows Forms";
          ResumeLayout(false);
       }
 
