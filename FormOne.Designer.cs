@@ -35,9 +35,9 @@
          // 
          ButtonStart.Location = new System.Drawing.Point(12, 12);
          ButtonStart.Name = "ButtonStart";
-         ButtonStart.Size = new System.Drawing.Size(75, 23);
+         ButtonStart.Size = new System.Drawing.Size(110, 23);
          ButtonStart.TabIndex = 0;
-         ButtonStart.Text = "button1";
+         ButtonStart.Text = "Запуск сервера";
          ButtonStart.UseVisualStyleBackColor = true;
          ButtonStart.Click += button1_Click;
          // 
