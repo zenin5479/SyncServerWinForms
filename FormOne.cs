@@ -8,6 +8,7 @@ using System.Windows.Forms;
 
 namespace SyncServerWinForms
 {
+   
    public partial class FormOne : Form
    {
       public class Item
@@ -44,7 +45,6 @@ namespace SyncServerWinForms
             //Console.WriteLine("Синхронный Json сервер");
             //Console.WriteLine("Сервер запущен по адресу {0}", _url);
 
-
             while (true)
             {
                try
@@ -54,7 +54,7 @@ namespace SyncServerWinForms
                }
                catch (Exception ex)
                {
-                  Console.WriteLine("Ошибка: {0}", ex.Message);
+                  //Console.WriteLine("Ошибка: {0}", ex.Message);
                }
             }
          }
