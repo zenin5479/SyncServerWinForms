@@ -20,6 +20,8 @@ namespace SyncServerWinForms
          public double Price { get; set; }
       }
 
+
+
       public FormOne()
       {
          InitializeComponent();
