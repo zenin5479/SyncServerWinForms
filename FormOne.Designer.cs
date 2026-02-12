@@ -39,7 +39,7 @@
          ButtonStart.TabIndex = 0;
          ButtonStart.Text = "Запуск сервера";
          ButtonStart.UseVisualStyleBackColor = true;
-         ButtonStart.Click += button1_Click;
+         ButtonStart.Click += ButtonStart_Click;
          // 
          // FormOne
          // 
