@@ -261,7 +261,7 @@ namespace SyncServerWinForms
          SyncServer server = new SyncServer("http://127.0.0.1:8080/");
          try
          {
-            server.Start();
+            //server.Start();
          }
          catch (HttpListenerException ex)
          {
