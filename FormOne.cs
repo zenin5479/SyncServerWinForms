@@ -34,8 +34,8 @@ namespace SyncServerWinForms
       public void Start()
       {
          _listener.Start();
-         Console.WriteLine("Синхронный Json сервер");
-         Console.WriteLine("Сервер запущен по адресу {0}", _url);
+         //Console.WriteLine("Синхронный Json сервер");
+         //Console.WriteLine("Сервер запущен по адресу {0}", _url);
          while (true)
          {
             try
@@ -45,7 +45,7 @@ namespace SyncServerWinForms
             }
             catch (Exception ex)
             {
-               Console.WriteLine("Ошибка: {0}", ex.Message);
+               //Console.WriteLine("Ошибка: {0}", ex.Message);
             }
          }
       }
@@ -56,7 +56,7 @@ namespace SyncServerWinForms
          HttpListenerResponse response = context.Response;
          try
          {
-            Console.WriteLine("{0} {1}", request.HttpMethod, request.Url.AbsolutePath);
+            //Console.WriteLine("{0} {1}", request.HttpMethod, request.Url.AbsolutePath);
             if (request.HttpMethod == "GET")
             {
                HandleGet(request, response);
@@ -265,11 +265,11 @@ namespace SyncServerWinForms
          }
          catch (HttpListenerException ex)
          {
-            Console.WriteLine("Не удалось запустить сервер: {0}", ex.Message);
+            //Console.WriteLine("Не удалось запустить сервер: {0}", ex.Message);
          }
          catch (Exception ex)
          {
-            Console.WriteLine("Ошибка: {0}", ex.Message);
+            //Console.WriteLine("Ошибка: {0}", ex.Message);
          }
       }
    }
