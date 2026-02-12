@@ -47,7 +47,7 @@
          // 
          // ButtonClear
          // 
-         ButtonClear.Location = new System.Drawing.Point(771, 108);
+         ButtonClear.Location = new System.Drawing.Point(668, 12);
          ButtonClear.Name = "ButtonClear";
          ButtonClear.Size = new System.Drawing.Size(90, 23);
          ButtonClear.TabIndex = 13;
@@ -56,7 +56,7 @@
          // 
          // RichTextBoxReader
          // 
-         RichTextBoxReader.Location = new System.Drawing.Point(114, 323);
+         RichTextBoxReader.Location = new System.Drawing.Point(12, 227);
          RichTextBoxReader.Name = "RichTextBoxReader";
          RichTextBoxReader.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
          RichTextBoxReader.Size = new System.Drawing.Size(370, 180);
@@ -67,7 +67,7 @@
          // 
          ListBoxReader.FormattingEnabled = true;
          ListBoxReader.ItemHeight = 15;
-         ListBoxReader.Location = new System.Drawing.Point(491, 137);
+         ListBoxReader.Location = new System.Drawing.Point(388, 41);
          ListBoxReader.Name = "ListBoxReader";
          ListBoxReader.ScrollAlwaysVisible = true;
          ListBoxReader.Size = new System.Drawing.Size(370, 184);
@@ -75,7 +75,7 @@
          // 
          // TextBoxReader
          // 
-         TextBoxReader.Location = new System.Drawing.Point(114, 137);
+         TextBoxReader.Location = new System.Drawing.Point(12, 41);
          TextBoxReader.Multiline = true;
          TextBoxReader.Name = "TextBoxReader";
          TextBoxReader.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
