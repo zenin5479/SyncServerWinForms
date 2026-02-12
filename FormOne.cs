@@ -37,12 +37,12 @@ namespace SyncServerWinForms
          {
             _listener.Start();
             //TextBoxReader.AppendText(lineone);
-            TextBoxReader.AppendText(Environment.NewLine);
+            //TextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
-            TextBoxReader.ScrollToCaret();
+            //TextBoxReader.ScrollToCaret();
 
-            Console.WriteLine("Синхронный Json сервер");
-            Console.WriteLine("Сервер запущен по адресу {0}", _url);
+            //Console.WriteLine("Синхронный Json сервер");
+            //Console.WriteLine("Сервер запущен по адресу {0}", _url);
 
 
             while (true)
