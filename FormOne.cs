@@ -1,10 +1,10 @@
-﻿using System.Net;
+﻿using Newtonsoft.Json;
 using System;
-using System.Windows.Forms;
-using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.IO;
+using System.Net;
 using System.Text;
+using System.Windows.Forms;
 
 namespace SyncServerWinForms
 {
@@ -36,6 +36,11 @@ namespace SyncServerWinForms
          public void Start()
          {
             _listener.Start();
+            //TextBoxReader.AppendText(lineone);
+            TextBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка TextBox вниз
+            TextBoxReader.ScrollToCaret();
+
             Console.WriteLine("Синхронный Json сервер");
             Console.WriteLine("Сервер запущен по адресу {0}", _url);
 
