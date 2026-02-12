@@ -29,6 +29,10 @@
       private void InitializeComponent()
       {
          ButtonStart = new System.Windows.Forms.Button();
+         ButtonClear = new System.Windows.Forms.Button();
+         RichTextBoxReader = new System.Windows.Forms.RichTextBox();
+         ListBoxReader = new System.Windows.Forms.ListBox();
+         TextBoxReader = new System.Windows.Forms.TextBox();
          SuspendLayout();
          // 
          // ButtonStart
@@ -41,20 +45,66 @@
          ButtonStart.UseVisualStyleBackColor = true;
          ButtonStart.Click += ButtonStart_Click;
          // 
+         // ButtonClear
+         // 
+         ButtonClear.Location = new System.Drawing.Point(771, 108);
+         ButtonClear.Name = "ButtonClear";
+         ButtonClear.Size = new System.Drawing.Size(90, 23);
+         ButtonClear.TabIndex = 13;
+         ButtonClear.Text = "Clear";
+         ButtonClear.UseVisualStyleBackColor = true;
+         // 
+         // RichTextBoxReader
+         // 
+         RichTextBoxReader.Location = new System.Drawing.Point(114, 323);
+         RichTextBoxReader.Name = "RichTextBoxReader";
+         RichTextBoxReader.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+         RichTextBoxReader.Size = new System.Drawing.Size(370, 180);
+         RichTextBoxReader.TabIndex = 11;
+         RichTextBoxReader.Text = "";
+         // 
+         // ListBoxReader
+         // 
+         ListBoxReader.FormattingEnabled = true;
+         ListBoxReader.ItemHeight = 15;
+         ListBoxReader.Location = new System.Drawing.Point(491, 137);
+         ListBoxReader.Name = "ListBoxReader";
+         ListBoxReader.ScrollAlwaysVisible = true;
+         ListBoxReader.Size = new System.Drawing.Size(370, 184);
+         ListBoxReader.TabIndex = 10;
+         // 
+         // TextBoxReader
+         // 
+         TextBoxReader.Location = new System.Drawing.Point(114, 137);
+         TextBoxReader.Multiline = true;
+         TextBoxReader.Name = "TextBoxReader";
+         TextBoxReader.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+         TextBoxReader.Size = new System.Drawing.Size(370, 180);
+         TextBoxReader.TabIndex = 8;
+         // 
          // FormOne
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-         ClientSize = new System.Drawing.Size(684, 461);
+         ClientSize = new System.Drawing.Size(975, 610);
+         Controls.Add(ButtonClear);
+         Controls.Add(RichTextBoxReader);
+         Controls.Add(ListBoxReader);
+         Controls.Add(TextBoxReader);
          Controls.Add(ButtonStart);
          Name = "FormOne";
          StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          Text = "Синхронный Json сервер Windows Forms";
          ResumeLayout(false);
+         PerformLayout();
       }
 
       #endregion
 
       private System.Windows.Forms.Button ButtonStart;
+      private System.Windows.Forms.Button ButtonClear;
+      private System.Windows.Forms.RichTextBox RichTextBoxReader;
+      private System.Windows.Forms.ListBox ListBoxReader;
+      private System.Windows.Forms.TextBox TextBoxReader;
    }
 }
