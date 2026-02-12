@@ -28,13 +28,25 @@
       /// </summary>
       private void InitializeComponent()
       {
+         button1 = new System.Windows.Forms.Button();
          SuspendLayout();
+         // 
+         // button1
+         // 
+         button1.Location = new System.Drawing.Point(12, 12);
+         button1.Name = "button1";
+         button1.Size = new System.Drawing.Size(75, 23);
+         button1.TabIndex = 0;
+         button1.Text = "button1";
+         button1.UseVisualStyleBackColor = true;
+         button1.Click += button1_Click;
          // 
          // FormOne
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(684, 461);
+         Controls.Add(button1);
          Name = "FormOne";
          StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
          Text = "Синхронный Json сервер Windows Forms";
@@ -42,5 +54,7 @@
       }
 
       #endregion
+
+      private System.Windows.Forms.Button button1;
    }
 }
