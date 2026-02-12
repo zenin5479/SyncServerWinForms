@@ -36,6 +36,7 @@ namespace SyncServerWinForms
          public void Start()
          {
             _listener.Start();
+
             //TextBoxReader.AppendText(lineone);
             //TextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
