@@ -256,7 +256,7 @@ namespace SyncServerWinForms
          InitializeComponent();
       }
 
-      private void button1_Click(object sender, System.EventArgs e)
+      private void button1_Click(object sender, EventArgs e)
       {
          SyncServer server = new SyncServer("http://127.0.0.1:8080/");
          try
