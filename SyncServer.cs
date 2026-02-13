@@ -26,7 +26,7 @@ namespace SyncServerWinForms
          _listener.Start();
 
          string lineone = "Проверка связи";
-         //TextBoxReader.AppendText(lineone);
+         TextBoxReader.AppendText(lineone);
          //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
