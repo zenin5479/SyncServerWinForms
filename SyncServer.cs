@@ -31,7 +31,9 @@ namespace SyncServerWinForms
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
 
-         //textBoxReader = textBoxReader.AppendText(lineone);
+
+
+         textBoxReader = textBoxReader.AppendText(lineone);
          //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
