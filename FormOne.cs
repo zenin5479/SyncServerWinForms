@@ -27,7 +27,7 @@ namespace SyncServerWinForms
          // Прокрутка RichTextBox вниз
          RichTextBoxReader.ScrollToCaret();
 
-         // Написать методы класса SyncServer 
+         // Написать методы класса SyncServer без отправки данных на печать
 
          //SyncServer.Start();
       }
