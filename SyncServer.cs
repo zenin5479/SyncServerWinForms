@@ -10,20 +10,20 @@ namespace SyncServerWinForms
 {
    public class SyncServer
    {
-      public readonly HttpListener _listener;
-      public readonly string _url;
-      public readonly List<Item> _items = new List<Item>();
+      public static HttpListener Listener;
+      public string Url;
+      public readonly List<Item> Items = new List<Item>();
 
       public SyncServer(string url)
       {
-         _url = url;
-         _listener = new HttpListener();
-         _listener.Prefixes.Add(url);
+         Url = url;
+         Listener = new HttpListener();
+         Listener.Prefixes.Add(url);
       }
 
       public static void Start()
       {
-         _listener.Start();
+         Listener.Start();
 
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
@@ -43,7 +43,7 @@ namespace SyncServerWinForms
          {
             try
             {
-               HttpListenerContext context = _listener.GetContext();
+               HttpListenerContext context = Listener.GetContext();
                ProcessRequest(context);
             }
             catch (Exception ex)
@@ -96,7 +96,7 @@ namespace SyncServerWinForms
          string path = request.Url.AbsolutePath.Trim('/');
          if (string.IsNullOrEmpty(path) || path == "api/items")
          {
-            SendResponse(response, 200, _items);
+            SendResponse(response, 200, Items);
             return;
          }
 
@@ -110,7 +110,7 @@ namespace SyncServerWinForms
                   return i.Id == id;
                }
 
-               Item item = _items.Find(Match);
+               Item item = Items.Find(Match);
                if (item != null)
                {
                   SendResponse(response, 200, item);
@@ -150,7 +150,7 @@ namespace SyncServerWinForms
                return;
             }
 
-            _items.Add(newItem);
+            Items.Add(newItem);
             SendResponse(response, 201, newItem);
          }
       }
@@ -176,7 +176,7 @@ namespace SyncServerWinForms
             return i.Id == id;
          }
 
-         Item existingItem = _items.Find(Match);
+         Item existingItem = Items.Find(Match);
          if (existingItem == null)
          {
             SendResponse(response, 404, new { error = "Товар не найден" });
@@ -223,14 +223,14 @@ namespace SyncServerWinForms
             return i.Id == id;
          }
 
-         Item item = _items.Find(Match);
+         Item item = Items.Find(Match);
          if (item == null)
          {
             SendResponse(response, 404, new { error = "Товар не найден" });
             return;
          }
 
-         _items.Remove(item);
+         Items.Remove(item);
          SendResponse(response, 200, new { message = "Элемент удален" });
       }
 
@@ -247,8 +247,8 @@ namespace SyncServerWinForms
 
       public void Stop()
       {
-         _listener.Stop();
-         _listener.Close();
+         Listener.Stop();
+         Listener.Close();
       }
    }
 }
