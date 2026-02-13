@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Windows.Forms;
 
 namespace SyncServerWinForms
 {
@@ -24,8 +25,8 @@ namespace SyncServerWinForms
       {
          _listener.Start();
 
-         System.Windows.Forms.TextBox TextBoxReader = null;
-         System.Windows.Forms.TextBoxReader.AppendText(lineone);
+         TextBox textBoxReader = null;
+         //textBoxReader = textBoxReader.AppendText(lineone);
          //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
