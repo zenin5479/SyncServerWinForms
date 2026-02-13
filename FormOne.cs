@@ -5,9 +5,6 @@ namespace SyncServerWinForms
 {
    public partial class FormOne : Form
    {
-     
-
-
       public FormOne()
       {
          InitializeComponent();
@@ -15,7 +12,8 @@ namespace SyncServerWinForms
 
       private void ButtonStart_Click(object sender, EventArgs e)
       {
-         //TextBoxReader.AppendText(lineone);
+         string lineone = "Проверка";
+         TextBoxReader.AppendText(lineone);
          TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          TextBoxReader.ScrollToCaret();
