@@ -18,7 +18,7 @@ namespace SyncServerWinForms
          // Прокрутка TextBox вниз
          TextBoxReader.ScrollToCaret();
 
-         //ListBoxReader.Items.Add(lineone);
+         ListBoxReader.Items.Add(lineone);
          // Прокрутка ListBox вниз
          ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
 
