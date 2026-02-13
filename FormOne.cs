@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
@@ -29,7 +30,19 @@ namespace SyncServerWinForms
 
          // Написать методы класса SyncServer без отправки данных на печать
 
-
+         SyncServer server = new SyncServer("http://127.0.0.1:8080/");
+         try
+         {
+            server.Start();
+         }
+         catch (HttpListenerException ex)
+         {
+            Console.WriteLine("Не удалось запустить сервер: {0}", ex.Message);
+         }
+         catch (Exception ex)
+         {
+            Console.WriteLine("Ошибка: {0}", ex.Message);
+         }
 
 
          //SyncServer.Start();

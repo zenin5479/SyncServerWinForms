@@ -26,7 +26,7 @@ namespace SyncServerWinForms
          //Console.WriteLine("Синхронный Json сервер");
          //Console.WriteLine("Сервер запущен по адресу {0}", _url);
 
-         string lineone = "Проверка связи";
+         //string lineone = "Проверка связи";
 
          //TextBoxReader.AppendText(lineone);
 
