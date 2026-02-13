@@ -27,7 +27,7 @@ namespace SyncServerWinForms
          // Прокрутка RichTextBox вниз
          RichTextBoxReader.ScrollToCaret();
 
-
+         SyncServer.
       }
 
       private void ButtonClear_Click(object sender, EventArgs e)
