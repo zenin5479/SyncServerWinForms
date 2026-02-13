@@ -10,9 +10,9 @@ namespace SyncServerWinForms
 {
    public class SyncServer
    {
-      private readonly HttpListener _listener;
-      private readonly string _url;
-      private readonly List<Item> _items = new List<Item>();
+      public readonly HttpListener _listener;
+      public readonly string _url;
+      public readonly List<Item> _items = new List<Item>();
 
       public SyncServer(string url)
       {
@@ -53,7 +53,7 @@ namespace SyncServerWinForms
          }
       }
 
-      private void ProcessRequest(HttpListenerContext context)
+      public void ProcessRequest(HttpListenerContext context)
       {
          HttpListenerRequest request = context.Request;
          HttpListenerResponse response = context.Response;
@@ -91,7 +91,7 @@ namespace SyncServerWinForms
          }
       }
 
-      private void HandleGet(HttpListenerRequest request, HttpListenerResponse response)
+      public void HandleGet(HttpListenerRequest request, HttpListenerResponse response)
       {
          string path = request.Url.AbsolutePath.Trim('/');
          if (string.IsNullOrEmpty(path) || path == "api/items")
@@ -131,7 +131,7 @@ namespace SyncServerWinForms
          SendResponse(response, 404, new { error = "Не найдено" });
       }
 
-      private void HandlePost(HttpListenerRequest request, HttpListenerResponse response)
+      public void HandlePost(HttpListenerRequest request, HttpListenerResponse response)
       {
          if (request.Url.AbsolutePath.Trim('/') != "api/items")
          {
@@ -155,7 +155,7 @@ namespace SyncServerWinForms
          }
       }
 
-      private void HandlePut(HttpListenerRequest request, HttpListenerResponse response)
+      public void HandlePut(HttpListenerRequest request, HttpListenerResponse response)
       {
          string path = request.Url.AbsolutePath.Trim('/');
          if (!path.StartsWith("api/items/"))
@@ -202,7 +202,7 @@ namespace SyncServerWinForms
          }
       }
 
-      private void HandleDelete(HttpListenerRequest request, HttpListenerResponse response)
+      public void HandleDelete(HttpListenerRequest request, HttpListenerResponse response)
       {
          string path = request.Url.AbsolutePath.Trim('/');
          if (!path.StartsWith("api/items/"))
@@ -234,7 +234,7 @@ namespace SyncServerWinForms
          SendResponse(response, 200, new { message = "Элемент удален" });
       }
 
-      private void SendResponse(HttpListenerResponse response, int statusCode, object data)
+      public void SendResponse(HttpListenerResponse response, int statusCode, object data)
       {
          string json = JsonConvert.SerializeObject(data, Formatting.Indented);
          byte[] buffer = Encoding.UTF8.GetBytes(json);
