@@ -53,6 +53,7 @@
          ButtonClear.TabIndex = 13;
          ButtonClear.Text = "Clear";
          ButtonClear.UseVisualStyleBackColor = true;
+         ButtonClear.Click += ButtonClear_Click;
          // 
          // RichTextBoxReader
          // 
