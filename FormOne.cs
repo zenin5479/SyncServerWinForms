@@ -29,6 +29,9 @@ namespace SyncServerWinForms
 
          // Написать методы класса SyncServer без отправки данных на печать
 
+
+
+
          //SyncServer.Start();
       }
 
