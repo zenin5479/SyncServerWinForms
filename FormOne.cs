@@ -18,11 +18,14 @@ namespace SyncServerWinForms
          TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          TextBoxReader.ScrollToCaret();
+         string url = "http://127.0.0.1:8080/";
 
-         SyncServer server = new SyncServer("http://127.0.0.1:8080/");
+         SyncServer server = new SyncServer(url);
          try
          {
             server.Start();
+            string line = "Синхронный Json сервер запущен по адресу: ";
+            TextBoxReader.AppendText(line + url);
          }
          catch (HttpListenerException ex)
          {
