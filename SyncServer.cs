@@ -28,7 +28,7 @@ namespace SyncServerWinForms
 
          string lineone = "Проверка связи";
 
-         TextBoxReader.AppendText(lineone);
+         //TextBoxReader.AppendText(lineone);
 
          while (true)
          {
