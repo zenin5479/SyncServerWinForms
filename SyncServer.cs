@@ -23,9 +23,6 @@ namespace SyncServerWinForms
       public void Start()
       {
          _listener.Start();
-         //Console.WriteLine("Синхронный Json сервер");
-         //Console.WriteLine("Сервер запущен по адресу {0}", _url);
-
          while (true)
          {
             try
