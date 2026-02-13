@@ -18,8 +18,6 @@ namespace SyncServerWinForms
          TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          TextBoxReader.ScrollToCaret();
-         
-         // Написать методы класса SyncServer без отправки данных на печать
 
          SyncServer server = new SyncServer("http://127.0.0.1:8080/");
          try
@@ -28,15 +26,16 @@ namespace SyncServerWinForms
          }
          catch (HttpListenerException ex)
          {
-            Console.WriteLine("Не удалось запустить сервер: {0}", ex.Message);
+            string line = "Не удалось запустить сервер: ";
+            TextBoxReader.AppendText(line + ex.Message);
          }
          catch (Exception ex)
          {
-            Console.WriteLine("Ошибка: {0}", ex.Message);
+            string line = "Ошибка: ";
+            TextBoxReader.AppendText(line + ex.Message);
          }
 
-
-         //SyncServer.Start();
+// Написать методы класса SyncServer без отправки данных на печать
       }
 
       private void ButtonClear_Click(object sender, EventArgs e)
