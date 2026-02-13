@@ -59,7 +59,7 @@ namespace SyncServerWinForms
          HttpListenerResponse response = context.Response;
          try
          {
-            Console.WriteLine("{0} {1}", request.HttpMethod, request.Url.AbsolutePath);
+            //Console.WriteLine("{0} {1}", request.HttpMethod, request.Url.AbsolutePath);
             if (request.HttpMethod == "GET")
             {
                HandleGet(request, response);
