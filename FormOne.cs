@@ -12,7 +12,7 @@ namespace SyncServerWinForms
 
       private void ButtonStart_Click(object sender, EventArgs e)
       {
-         string lineone = "Проверка";
+         string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
          TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
