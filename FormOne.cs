@@ -35,7 +35,7 @@ namespace SyncServerWinForms
             TextBoxReader.AppendText(line + ex.Message);
          }
 
-// Написать методы класса SyncServer без отправки данных на печать
+         // Написать методы класса SyncServer без отправки данных на печать
       }
 
       private void ButtonClear_Click(object sender, EventArgs e)
