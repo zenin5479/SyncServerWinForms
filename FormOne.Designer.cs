@@ -106,6 +106,6 @@
       private System.Windows.Forms.Button ButtonClear;
       private System.Windows.Forms.RichTextBox RichTextBoxReader;
       private System.Windows.Forms.ListBox ListBoxReader;
-      private System.Windows.Forms.TextBox TextBoxReader;
+      public System.Windows.Forms.TextBox TextBoxReader;
    }
 }

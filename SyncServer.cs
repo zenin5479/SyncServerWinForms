@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Text;
-using System.Windows.Forms;
 
 namespace SyncServerWinForms
 {
@@ -27,7 +26,10 @@ namespace SyncServerWinForms
 
          string lineone = "Проверка связи";
 
-         //TextBoxReader.AppendText(lineone);
+         System.Windows.Forms.TextBoxReader;
+
+
+         TextBoxReader.AppendText(lineone);
          //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
