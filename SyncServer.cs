@@ -27,6 +27,7 @@ namespace SyncServerWinForms
          //Console.WriteLine("Сервер запущен по адресу {0}", _url);
 
          string lineone = "Проверка связи";
+
          TextBoxReader.AppendText(lineone);
 
          while (true)
