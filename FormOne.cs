@@ -10,7 +10,7 @@ namespace SyncServerWinForms
          InitializeComponent();
       }
 
-      private void ButtonStart_Click(object sender, EventArgs e)
+      private void ButtonStart_Click(object sender, EventArgs e, string r)
       {
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);

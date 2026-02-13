@@ -43,7 +43,7 @@
          ButtonStart.TabIndex = 0;
          ButtonStart.Text = "Запуск сервера";
          ButtonStart.UseVisualStyleBackColor = true;
-         ButtonStart.Click += ButtonStart_Click;
+         ButtonStart.Click += (sender, e) => ButtonStart_Click(sender, e, TODO);
          // 
          // ButtonClear
          // 
