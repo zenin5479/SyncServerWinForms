@@ -33,7 +33,6 @@ namespace SyncServerWinForms
          TextBoxReader.Clear();
          RichTextBoxReader.Clear();
          ListBoxReader.Items.Clear();
-
       }
    }
 }
