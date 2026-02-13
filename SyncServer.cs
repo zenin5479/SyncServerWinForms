@@ -24,7 +24,8 @@ namespace SyncServerWinForms
       {
          _listener.Start();
 
-         //TextBoxReader.AppendText(lineone);
+         System.Windows.Forms.TextBox TextBoxReader = null;
+         System.Windows.Forms.TextBoxReader.AppendText(lineone);
          //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
