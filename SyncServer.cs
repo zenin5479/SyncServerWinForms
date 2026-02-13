@@ -21,7 +21,7 @@ namespace SyncServerWinForms
          _listener.Prefixes.Add(url);
       }
 
-      public void Start()
+      public static void Start()
       {
          _listener.Start();
 
