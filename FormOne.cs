@@ -18,16 +18,7 @@ namespace SyncServerWinForms
          TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          TextBoxReader.ScrollToCaret();
-
-         ListBoxReader.Items.Add(lineone);
-         // Прокрутка ListBox вниз
-         ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
-
-         RichTextBoxReader.AppendText(lineone);
-         RichTextBoxReader.AppendText(Environment.NewLine);
-         // Прокрутка RichTextBox вниз
-         RichTextBoxReader.ScrollToCaret();
-
+         
          // Написать методы класса SyncServer без отправки данных на печать
 
          SyncServer server = new SyncServer("http://127.0.0.1:8080/");
