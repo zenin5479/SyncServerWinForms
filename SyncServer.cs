@@ -23,7 +23,7 @@ namespace SyncServerWinForms
       }
 
       // Запись логов
-      private void Savelog(string tolog, Color color, RichTextBox richTextBoxSavelog, TextBox textBoxReader)
+      private void Savelog(string tolog, Color color, RichTextBox richTextBoxSavelog, TextBox textBoxReader, ListBox ListBoxReader)
       {
          richTextBoxSavelog.SelectionColor = color;
          richTextBoxSavelog.AppendText(tolog);
