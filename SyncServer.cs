@@ -49,6 +49,7 @@ namespace SyncServerWinForms
 
          richTextBoxReader.SelectionColor = color;
          richTextBoxReader.AppendText(tolog);
+         //RichTextBoxReader.AppendText(Environment.NewLine);
          richTextBoxReader.ScrollToCaret();
 
 
