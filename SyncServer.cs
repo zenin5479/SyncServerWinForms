@@ -28,6 +28,10 @@ namespace SyncServerWinForms
          richTextBoxSavelog.SelectionColor = color;
          richTextBoxSavelog.AppendText(tolog);
          richTextBoxSavelog.ScrollToCaret();
+
+         textBoxReader.SelectionColor = color;
+         textBoxReader.AppendText(tolog);
+         textBoxReader.ScrollToCaret();
       }
 
       public void Start()
