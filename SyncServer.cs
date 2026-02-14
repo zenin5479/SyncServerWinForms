@@ -42,8 +42,6 @@ namespace SyncServerWinForms
          //ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
 
          // RichTextBox
-        
-
          richTextBoxReader.SelectionColor = color;
          richTextBoxReader.AppendText(tolog);
          richTextBoxReader.AppendText(Environment.NewLine);
