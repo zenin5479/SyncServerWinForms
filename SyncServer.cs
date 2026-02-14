@@ -23,7 +23,7 @@ namespace SyncServerWinForms
       }
 
       // Запись логов
-      private void Savelog(string tolog, Color color, TextBox textBoxReader, RichTextBox richTextBoxSavelog, ListBox listBoxReader)
+      private void Savelog(string tolog, Color color, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxSavelog)
       {
          // TextBox
          // Добавляет строку оставляя предыдущие
