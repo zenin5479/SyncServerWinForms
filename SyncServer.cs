@@ -23,11 +23,11 @@ namespace SyncServerWinForms
       }
 
       // Запись логов
-      private void Savelog(string tolog, Color color, RichTextBox textBoxSavelog)
+      private void Savelog(string tolog, Color color, RichTextBox RichTextBoxSavelog)
       {
-         textBoxSavelog.SelectionColor = color;
-         textBoxSavelog.AppendText(tolog);
-         textBoxSavelog.ScrollToCaret();
+         RichTextBoxSavelog.SelectionColor = color;
+         RichTextBoxSavelog.AppendText(tolog);
+         RichTextBoxSavelog.ScrollToCaret();
       }
 
       public void Start()
