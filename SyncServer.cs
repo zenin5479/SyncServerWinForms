@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -18,6 +19,14 @@ namespace SyncServerWinForms
          _url = url;
          _listener = new HttpListener();
          _listener.Prefixes.Add(url);
+      }
+
+      // Запись логов
+      private void Savelog(string tolog, Color color)
+      {
+         RichTextBoxSavelog.SelectionColor = color;
+         RichTextBoxSavelog.AppendText(tolog);
+         RichTextBoxSavelog.ScrollToCaret();
       }
 
       public void Start()
