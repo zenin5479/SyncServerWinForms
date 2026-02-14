@@ -44,21 +44,14 @@ namespace SyncServerWinForms
          // RichTextBox
          //RichTextBoxReader.AppendText(line);
          //RichTextBoxReader.AppendText(Environment.NewLine);
-        
+
          //RichTextBoxReader.ScrollToCaret();
 
          richTextBoxReader.SelectionColor = color;
          richTextBoxReader.AppendText(tolog);
          richTextBoxReader.AppendText(Environment.NewLine);
- // Прокрутка RichTextBox вниз
+         // Прокрутка RichTextBox вниз
          richTextBoxReader.ScrollToCaret();
-
-
-
-         
-
-
-
       }
 
       public void Start()
