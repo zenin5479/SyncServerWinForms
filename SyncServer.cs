@@ -13,11 +13,13 @@ namespace SyncServerWinForms
    {
       private readonly HttpListener _listener;
       private readonly string _url;
+      private readonly TextBox _textBoxReader;
       private readonly List<Item> _items = new List<Item>();
 
-      public SyncServer(string url)
+      public SyncServer(string url, TextBox textBoxReader)
       {
          _url = url;
+         _textBoxReader = textBoxReader;
          _listener = new HttpListener();
          _listener.Prefixes.Add(url);
       }
@@ -58,6 +60,7 @@ namespace SyncServerWinForms
             {
                HttpListenerContext context = _listener.GetContext();
                ProcessRequest(context);
+               _textBoxReader.AppendText("Старт"); //
             }
             catch (Exception ex)
             {
