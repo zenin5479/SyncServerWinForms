@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Windows.Forms;
 
 namespace SyncServerWinForms
 {
@@ -22,11 +23,11 @@ namespace SyncServerWinForms
       }
 
       // Запись логов
-      private void Savelog(string tolog, Color color)
+      private void Savelog(string tolog, Color color, TextBox TextBoxSavelog)
       {
-         RichTextBoxSavelog.SelectionColor = color;
-         RichTextBoxSavelog.AppendText(tolog);
-         RichTextBoxSavelog.ScrollToCaret();
+         TextBoxSavelog.SelectionColor = color;
+         TextBoxSavelog.AppendText(tolog);
+         TextBoxSavelog.ScrollToCaret();
       }
 
       public void Start()
