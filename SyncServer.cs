@@ -27,19 +27,19 @@ namespace SyncServerWinForms
       {
          // TextBox
          // Добавляет строку оставляя предыдущие
-         //TextBoxReader.AppendText(line);
+         //TextBoxReader.AppendText(tolog);
          //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
 
-         //textBoxReader.SelectionColor = color;
+         textBoxReader.SelectionColor = color;
          textBoxReader.AppendText(tolog);
          textBoxReader.ScrollToCaret();
 
          // ListBox
-         //ListBoxReader.Items.Add(line);
+         listBoxReader.Items.Add(tolog);
          // Прокрутка ListBox вниз
-         //ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
+         listBoxReader.TopIndex = listBoxReader.Items.Count - 1;
 
          // RichTextBox
          richTextBoxReader.SelectionColor = color;
