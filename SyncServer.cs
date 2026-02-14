@@ -27,15 +27,15 @@ namespace SyncServerWinForms
       {
          // TextBox
          // Добавляет строку оставляя предыдущие
-         TextBoxReader.AppendText(line);
-         TextBoxReader.AppendText(Environment.NewLine);
+         //TextBoxReader.AppendText(line);
+         //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
-         TextBoxReader.ScrollToCaret();
+         //TextBoxReader.ScrollToCaret();
 
          // ListBox
-         ListBoxReader.Items.Add(line);
+         //ListBoxReader.Items.Add(line);
          // Прокрутка ListBox вниз
-         ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
+         //ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
 
          // RichTextBox
          RichTextBoxReader.AppendText(line);
