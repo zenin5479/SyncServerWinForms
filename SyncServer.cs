@@ -23,7 +23,7 @@ namespace SyncServerWinForms
       }
 
       // Запись логов
-      private void Savelog(string tolog, Color color, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxSavelog)
+      private void Savelog(string tolog, Color color, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
       {
          // TextBox
          // Добавляет строку оставляя предыдущие
@@ -32,7 +32,7 @@ namespace SyncServerWinForms
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
 
-         textBoxReader.SelectionColor = color;
+         //textBoxReader.SelectionColor = color;
          textBoxReader.AppendText(tolog);
          textBoxReader.ScrollToCaret();
 
@@ -47,13 +47,13 @@ namespace SyncServerWinForms
          // Прокрутка RichTextBox вниз
          //RichTextBoxReader.ScrollToCaret();
 
-         richTextBoxSavelog.SelectionColor = color;
-         richTextBoxSavelog.AppendText(tolog);
-         richTextBoxSavelog.ScrollToCaret();
+         richTextBoxReader.SelectionColor = color;
+         richTextBoxReader.AppendText(tolog);
+         richTextBoxReader.ScrollToCaret();
 
 
 
-         listBoxReader.SelectionColor = color;
+         richTextBoxReader.SelectionColor = color;
          listBoxReader.AppendText(tolog);
          textBoxReader.ScrollToCaret();
 
