@@ -45,8 +45,7 @@ namespace SyncServerWinForms
          //RichTextBoxReader.AppendText(line);
          //RichTextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка RichTextBox вниз
-         RichTextBoxReader.ScrollToCaret();
-
+         //RichTextBoxReader.ScrollToCaret();
 
          richTextBoxSavelog.SelectionColor = color;
          richTextBoxSavelog.AppendText(tolog);
