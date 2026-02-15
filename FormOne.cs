@@ -6,6 +6,11 @@ namespace SyncServerWinForms
 {
    public partial class FormOne : Form
    {
+      private TextBox textBoxInput;
+      private ListBox listBoxLog;
+      private RichTextBox richTextBoxContent;
+
+
       public FormOne()
       {
          InitializeComponent();
