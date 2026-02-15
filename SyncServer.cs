@@ -39,8 +39,8 @@ namespace SyncServerWinForms
          //TextBoxReader.ScrollToCaret();
 
          //textBoxReader.SelectionColor = color;
-         textBoxReader.AppendText(tolog);
-         textBoxReader.ScrollToCaret();
+         _textBoxReader.AppendText(tolog);
+         _textBoxReader.ScrollToCaret();
 
          // ListBox
          listBoxReader.Items.Add(tolog);
