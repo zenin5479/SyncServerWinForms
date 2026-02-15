@@ -16,7 +16,7 @@ namespace SyncServerWinForms
          InitializeComponent();
          // здесь создаются элементы управления
          // Создаём экземпляр вспомогательного класса и передаём ему ссылки
-         var helper = new SyncServer(textBoxReader, listBoxLog, richTextBoxContent);
+         var helper = new SyncServer(textBoxReader, listBoxReader, richTextBoxContent);
 
       }
 
