@@ -6,10 +6,6 @@ namespace SyncServerWinForms
 {
    public partial class FormOne : Form
    {
-      private TextBox _textBoxReader;
-      private ListBox _listBoxReader;
-      private RichTextBox _richTextBoxReader;
-
       public FormOne()
       {
          InitializeComponent();
