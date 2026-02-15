@@ -43,9 +43,9 @@ namespace SyncServerWinForms
          _textBoxReader.ScrollToCaret();
 
          // ListBox
-         listBoxReader.Items.Add(tolog);
+         _listBoxReader.Items.Add(tolog);
          // Прокрутка ListBox вниз
-         listBoxReader.TopIndex = listBoxReader.Items.Count - 1;
+         _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
 
          // RichTextBox
          richTextBoxReader.SelectionColor = color;
