@@ -20,6 +20,7 @@ namespace SyncServerWinForms
       public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
       {
          _textBoxReader = textBoxReader;
+         _listBoxReader = listBoxReader;
          _listener = new HttpListener();
          _listener.Prefixes.Add(url);
       }
