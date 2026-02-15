@@ -18,11 +18,12 @@ namespace SyncServerWinForms
       private readonly RichTextBox richTextBoxReader;
       private readonly List<Item> _items = new List<Item>();
 
-      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader)
+      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
       {
          _url = url;
          _textBoxReader = textBoxReader;
          this.listBoxReader = listBoxReader;
+         this.richTextBoxReader = richTextBoxReader;
          _listener = new HttpListener();
          _listener.Prefixes.Add(url);
       }
