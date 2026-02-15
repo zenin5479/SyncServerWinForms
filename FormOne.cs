@@ -14,6 +14,10 @@ namespace SyncServerWinForms
       public FormOne()
       {
          InitializeComponent();
+         // здесь создаются элементы управления
+         // Создаём экземпляр вспомогательного класса и передаём ему ссылки
+         var helper = new SyncServer(textBoxInput, listBoxLog, richTextBoxContent);
+
       }
 
       private void ButtonStart_Click(object sender, EventArgs e)
