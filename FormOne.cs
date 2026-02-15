@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Net;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace SyncServerWinForms
 {
@@ -9,7 +10,6 @@ namespace SyncServerWinForms
       private TextBox textBoxReader;
       private ListBox listBoxReader;
       private RichTextBox richTextBoxReader;
-
 
       public FormOne()
       {
@@ -26,7 +26,7 @@ namespace SyncServerWinForms
          string url = "http://127.0.0.1:8080/";
          // здесь создаются элементы управления
          // Создаём экземпляр вспомогательного класса и передаём ему ссылки
-         SyncServer server = new SyncServer(url);
+         SyncServer server = new SyncServer(url, textBoxReader, listBoxReader, richTextBoxReader);
          try
          {
             server.Start();
@@ -43,8 +43,6 @@ namespace SyncServerWinForms
             string line = "Ошибка: ";
             TextBoxReader.AppendText(line + ex.Message);
          }
-
-         // Написать методы класса SyncServer без отправки данных на печать
       }
 
       private void ButtonClear_Click(object sender, EventArgs e)
