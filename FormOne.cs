@@ -25,7 +25,7 @@ namespace SyncServerWinForms
          string url = "http://127.0.0.1:8080/";
          // здесь создаются элементы управления
          // Создаём экземпляр вспомогательного класса и передаём ему ссылки
-         SyncServer server = new SyncServer(url, _textBoxReader, _listBoxReader, _richTextBoxReader);
+         SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader);
          try
          {
             server.Start();
