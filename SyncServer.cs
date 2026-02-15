@@ -22,7 +22,7 @@ namespace SyncServerWinForms
       {
          _url = url;
          _textBoxReader = textBoxReader;
-         this._listBoxReader = listBoxReader;
+         _listBoxReader = listBoxReader;
          this.richTextBoxReader = richTextBoxReader;
          _listener = new HttpListener();
          _listener.Prefixes.Add(url);
