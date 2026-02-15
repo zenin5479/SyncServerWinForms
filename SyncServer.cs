@@ -33,10 +33,10 @@ namespace SyncServerWinForms
       {
          // TextBox
          // Добавляет строку оставляя предыдущие
-         _textBoxReader.AppendText(tolog);
-         _textBoxReader.AppendText(Environment.NewLine);
+         //_textBoxReader.AppendText(tolog);
+         //_textBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
-         _textBoxReader.ScrollToCaret();
+         //_textBoxReader.ScrollToCaret();
 
          //_textBoxReader.SelectionColor = color;
          _textBoxReader.AppendText(tolog);
