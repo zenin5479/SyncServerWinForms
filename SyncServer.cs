@@ -28,13 +28,8 @@ namespace SyncServerWinForms
          _listener.Prefixes.Add(url);
       }
 
-      public SyncServer(TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
-      {
-         throw new NotImplementedException();
-      }
-
       // Запись логов
-      private void Savelog(string tolog, Color color, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
+      private void Savelog(string tolog, Color color)
       {
          // TextBox
          // Добавляет строку оставляя предыдущие
