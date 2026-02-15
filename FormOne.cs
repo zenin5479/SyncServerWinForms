@@ -20,7 +20,7 @@ namespace SyncServerWinForms
          TextBoxReader.ScrollToCaret();
          string url = "http://127.0.0.1:8080/";
 
-         SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader);
+         SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader);
          try
          {
             server.Start();
