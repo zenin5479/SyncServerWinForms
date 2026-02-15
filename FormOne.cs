@@ -14,10 +14,6 @@ namespace SyncServerWinForms
       public FormOne()
       {
          InitializeComponent();
-         // здесь создаются элементы управления
-         // Создаём экземпляр вспомогательного класса и передаём ему ссылки
-         var helper = new SyncServer(textBoxReader, listBoxReader, richTextBoxContent);
-
       }
 
       private void ButtonStart_Click(object sender, EventArgs e)
@@ -28,6 +24,9 @@ namespace SyncServerWinForms
          // Прокрутка TextBox вниз
          TextBoxReader.ScrollToCaret();
          string url = "http://127.0.0.1:8080/";
+         // здесь создаются элементы управления
+         // Создаём экземпляр вспомогательного класса и передаём ему ссылки
+         var helper = new SyncServer(textBoxReader, listBoxReader, richTextBoxReader);
 
          SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader);
          try
