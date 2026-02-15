@@ -19,8 +19,7 @@ namespace SyncServerWinForms
          // Прокрутка TextBox вниз
          TextBoxReader.ScrollToCaret();
          string url = "http://127.0.0.1:8080/";
-         // здесь создаются элементы управления
-         // Создаём экземпляр вспомогательного класса и передаём ему ссылки
+         // Создаём экземпляр класса и передаём ему ссылки на элементы управления
          SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader);
          try
          {
