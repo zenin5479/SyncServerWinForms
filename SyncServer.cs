@@ -36,7 +36,7 @@ namespace SyncServerWinForms
          //TextBoxReader.AppendText(tolog);
          //TextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка TextBox вниз
-         //TextBoxReader.ScrollToCaret();
+         _textBoxReader.ScrollToCaret();
 
          //_textBoxReader.SelectionColor = color;
          _textBoxReader.AppendText(tolog);
