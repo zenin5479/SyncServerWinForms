@@ -52,7 +52,7 @@ namespace SyncServerWinForms
          _richTextBoxReader.AppendText(tolog);
          _richTextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка RichTextBox вниз
-         richTextBoxReader.ScrollToCaret();
+         _richTextBoxReader.ScrollToCaret();
       }
 
       public void Start()
