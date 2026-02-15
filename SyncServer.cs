@@ -38,7 +38,7 @@ namespace SyncServerWinForms
          // Прокрутка TextBox вниз
          //TextBoxReader.ScrollToCaret();
 
-         //textBoxReader.SelectionColor = color;
+         _textBoxReader.SelectionColor = color;
          _textBoxReader.AppendText(tolog);
          _textBoxReader.ScrollToCaret();
 
