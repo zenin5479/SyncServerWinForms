@@ -63,7 +63,6 @@ namespace SyncServerWinForms
          {
             try
             {
-
                HttpListenerContext context = _listener.GetContext();
                ProcessRequest(context);
                _textBoxReader.AppendText("Старт");
