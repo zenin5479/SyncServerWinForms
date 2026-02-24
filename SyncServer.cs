@@ -62,7 +62,7 @@ namespace SyncServerWinForms
             {
                HttpListenerContext context = _listener.GetContext();
                ProcessRequest(context);
-               _textBoxReader.AppendText("Старт"); //
+               _textBoxReader.AppendText("Старт");
             }
             catch (Exception ex)
             {
@@ -77,7 +77,7 @@ namespace SyncServerWinForms
          HttpListenerResponse response = context.Response;
          try
          {
-            Console.WriteLine("{0} {1}", request.HttpMethod, request.Url.AbsolutePath);
+            _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
             if (request.HttpMethod == "GET")
             {
                HandleGet(request, response);
