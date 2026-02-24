@@ -12,6 +12,7 @@ namespace SyncServerWinForms
    public class SyncServer
    {
       private readonly HttpListener _listener;
+      private readonly string _url;
       private readonly TextBox _textBoxReader;
       private readonly ListBox _listBoxReader;
       private readonly RichTextBox _richTextBoxReader;
@@ -19,11 +20,12 @@ namespace SyncServerWinForms
 
       public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
       {
+         _url = url;
          _textBoxReader = textBoxReader;
          _listBoxReader = listBoxReader;
          _richTextBoxReader = richTextBoxReader;
          _listener = new HttpListener();
-         _listener.Prefixes.Add(url);
+
       }
 
       // Запись логов
@@ -55,11 +57,13 @@ namespace SyncServerWinForms
 
       public void Start()
       {
+         _listener.Prefixes.Add(_url);
          _listener.Start();
          while (true)
          {
             try
             {
+
                HttpListenerContext context = _listener.GetContext();
                ProcessRequest(context);
                _textBoxReader.AppendText("Старт");
