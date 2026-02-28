@@ -45,5 +45,10 @@ namespace SyncServerWinForms
          RichTextBoxReader.Clear();
          ListBoxReader.Items.Clear();
       }
+
+      private void ButtonStop_Click(object sender, EventArgs e)
+      {
+
+      }
    }
 }

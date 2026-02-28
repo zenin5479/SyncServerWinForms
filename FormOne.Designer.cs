@@ -92,6 +92,7 @@
          ButtonStop.TabIndex = 14;
          ButtonStop.Text = "Стоп";
          ButtonStop.UseVisualStyleBackColor = true;
+         ButtonStop.Click += ButtonStop_Click;
          // 
          // FormOne
          // 
