@@ -33,6 +33,7 @@
          RichTextBoxReader = new System.Windows.Forms.RichTextBox();
          ListBoxReader = new System.Windows.Forms.ListBox();
          TextBoxReader = new System.Windows.Forms.TextBox();
+         ButtonStop = new System.Windows.Forms.Button();
          SuspendLayout();
          // 
          // ButtonStart
@@ -47,7 +48,7 @@
          // 
          // ButtonClear
          // 
-         ButtonClear.Location = new System.Drawing.Point(668, 12);
+         ButtonClear.Location = new System.Drawing.Point(669, 381);
          ButtonClear.Name = "ButtonClear";
          ButtonClear.Size = new System.Drawing.Size(90, 23);
          ButtonClear.TabIndex = 13;
@@ -71,7 +72,7 @@
          ListBoxReader.Location = new System.Drawing.Point(388, 41);
          ListBoxReader.Name = "ListBoxReader";
          ListBoxReader.ScrollAlwaysVisible = true;
-         ListBoxReader.Size = new System.Drawing.Size(370, 184);
+         ListBoxReader.Size = new System.Drawing.Size(371, 184);
          ListBoxReader.TabIndex = 10;
          // 
          // TextBoxReader
@@ -83,11 +84,21 @@
          TextBoxReader.Size = new System.Drawing.Size(370, 180);
          TextBoxReader.TabIndex = 8;
          // 
+         // ButtonStop
+         // 
+         ButtonStop.Location = new System.Drawing.Point(669, 12);
+         ButtonStop.Name = "ButtonStop";
+         ButtonStop.Size = new System.Drawing.Size(90, 23);
+         ButtonStop.TabIndex = 14;
+         ButtonStop.Text = "Стоп";
+         ButtonStop.UseVisualStyleBackColor = true;
+         // 
          // FormOne
          // 
          AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
          AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
          ClientSize = new System.Drawing.Size(771, 416);
+         Controls.Add(ButtonStop);
          Controls.Add(ButtonClear);
          Controls.Add(RichTextBoxReader);
          Controls.Add(ListBoxReader);
@@ -107,5 +118,6 @@
       private System.Windows.Forms.RichTextBox RichTextBoxReader;
       private System.Windows.Forms.ListBox ListBoxReader;
       private System.Windows.Forms.TextBox TextBoxReader;
+      private System.Windows.Forms.Button ButtonStop;
    }
 }
