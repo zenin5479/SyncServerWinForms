@@ -60,19 +60,22 @@ namespace SyncServerWinForms
          _listener.Prefixes.Add(_url);
          _listener.Start();
          _textBoxReader.AppendText("Синхронный Json сервер");
-         _textBoxReader.AppendText("Сервер запущен по адресу: "+ _url);
-         while (true)
+         _textBoxReader.AppendText("\nСервер запущен по адресу: " + _url);
+
+         try
          {
-            try
+            while (true)
             {
                HttpListenerContext context = _listener.GetContext();
                ProcessRequest(context);
             }
-            catch (Exception ex)
-            {
-               _textBoxReader.AppendText("Ошибка: " + ex.Message);
-            }
+
          }
+         catch (Exception ex)
+         {
+            _textBoxReader.AppendText("Ошибка: " + ex.Message);
+         }
+
       }
 
       private void ProcessRequest(HttpListenerContext context)
