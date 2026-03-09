@@ -59,8 +59,6 @@ namespace SyncServerWinForms
       {
          _listener.Prefixes.Add(_url);
          _listener.Start();
-        
-
          _textBoxReader.AppendText("Синхронный Json сервер");
          _textBoxReader.AppendText("Сервер запущен по адресу: "+ _url);
 
