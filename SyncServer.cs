@@ -24,7 +24,6 @@ namespace SyncServerWinForms
          _textBoxReader = textBoxReader;
          _listBoxReader = listBoxReader;
          _richTextBoxReader = richTextBoxReader;
-         
       }
 
       // Запись логов
