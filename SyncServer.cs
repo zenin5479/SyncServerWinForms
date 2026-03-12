@@ -76,7 +76,6 @@ namespace SyncServerWinForms
          {
             _textBoxReader.AppendText("Ошибка: " + ex.Message);
          }
-
       }
 
       private void ProcessRequest(HttpListenerContext context)
