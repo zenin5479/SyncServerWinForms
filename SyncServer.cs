@@ -11,7 +11,7 @@ namespace SyncServerWinForms
 {
    public class SyncServer
    {
-      private readonly HttpListener _listener;
+      private HttpListener _listener;
       private readonly string _url;
       private readonly TextBox _textBoxReader;
       private readonly ListBox _listBoxReader;
@@ -24,7 +24,7 @@ namespace SyncServerWinForms
          _textBoxReader = textBoxReader;
          _listBoxReader = listBoxReader;
          _richTextBoxReader = richTextBoxReader;
-         _listener = new HttpListener();
+         
       }
 
       // Запись логов
@@ -56,7 +56,7 @@ namespace SyncServerWinForms
 
       public void Start()
       {
-         
+         _listener = new HttpListener();
          _listener.Prefixes.Add(_url);
          _listener.Start();
          _textBoxReader.AppendText("Синхронный Json сервер");
