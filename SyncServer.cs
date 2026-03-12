@@ -16,7 +16,7 @@ namespace SyncServerWinForms
       private TextBox _textBoxReader;
       private ListBox _listBoxReader;
       private RichTextBox _richTextBoxReader;
-      private readonly List<Item> _items = new List<Item>();
+      private List<Item> _items = new List<Item>();
 
       public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
       {
