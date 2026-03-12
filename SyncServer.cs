@@ -69,7 +69,6 @@ namespace SyncServerWinForms
                HttpListenerContext context = _listener.GetContext();
                ProcessRequest(context);
             }
-
          }
          catch (Exception ex)
          {
