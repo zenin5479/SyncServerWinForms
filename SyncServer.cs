@@ -70,7 +70,7 @@ namespace SyncServerWinForms
          _listBoxReader.Items.Add(Environment.NewLine);
 
          // RichTextBox
-         _richTextBoxReader.SelectionColor = color;
+         
          _richTextBoxReader.AppendText(tolog);
          _richTextBoxReader.AppendText(Environment.NewLine);
          // Прокрутка RichTextBox вниз
