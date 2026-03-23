@@ -84,7 +84,7 @@ namespace SyncServerWinForms
          }
          catch (Exception ex)
          {
-            //_textBoxReader.AppendText("Ошибка: " + ex.Message);
+            _textBoxReader.AppendText("Ошибка: " + ex.Message);
          }
       }
 
