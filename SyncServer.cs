@@ -71,7 +71,7 @@ namespace SyncServerWinForms
 
          _richTextBoxReader.AppendText("Синхронный Json сервер");
          _richTextBoxReader.AppendText(Environment.NewLine);
-         _richTextBoxReader.AppendText("Синхронный Json сервер");
+         _richTextBoxReader.AppendText("Сервер запущен по адресу: " + _url);
          _richTextBoxReader.AppendText(Environment.NewLine);
 
          try
