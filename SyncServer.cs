@@ -76,10 +76,6 @@ namespace SyncServerWinForms
          _richTextBoxReader.AppendText("Синхронный Json сервер");
          _richTextBoxReader.AppendText(Environment.NewLine);
 
-         // Прокрутка RichTextBox вниз
-         _richTextBoxReader.ScrollToCaret();
-
-
          try
          {
             while (true)
