@@ -74,18 +74,18 @@ namespace SyncServerWinForms
          _richTextBoxReader.AppendText("Сервер запущен по адресу: " + _url);
          _richTextBoxReader.AppendText(Environment.NewLine);
 
-         try
-         {
-            while (true)
-            {
-               HttpListenerContext context = _listener.GetContext();
-               ProcessRequest(context);
-            }
-         }
-         catch (Exception ex)
-         {
-            _textBoxReader.AppendText("Ошибка: " + ex.Message);
-         }
+         //try
+         //{
+         //   while (true)
+         //   {
+         //      HttpListenerContext context = _listener.GetContext();
+         //      ProcessRequest(context);
+         //   }
+         //}
+         //catch (Exception ex)
+         //{
+         //   _textBoxReader.AppendText("Ошибка: " + ex.Message);
+         //}
       }
 
       private void ProcessRequest(HttpListenerContext context)
