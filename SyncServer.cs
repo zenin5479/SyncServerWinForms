@@ -65,7 +65,8 @@ namespace SyncServerWinForms
          _textBoxReader.AppendText(Environment.NewLine);
 
          // ListBox
-         _listBoxReader.Items.Add(tolog);
+         _listBoxReader.Items.Add("Синхронный Json сервер");
+         _listBoxReader.Items.Add(Environment.NewLine);
          // Прокрутка ListBox вниз
          _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
 
