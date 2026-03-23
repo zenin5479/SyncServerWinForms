@@ -67,7 +67,8 @@ namespace SyncServerWinForms
          // ListBox
          _listBoxReader.Items.Add("Синхронный Json сервер");
          _listBoxReader.Items.Add(Environment.NewLine);
-         
+         _listBoxReader.Items.Add("Синхронный Json сервер");
+         _listBoxReader.Items.Add(Environment.NewLine);
 
 
          try
