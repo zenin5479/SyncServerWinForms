@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
@@ -28,7 +29,7 @@ namespace SyncServerWinForms
             TextBoxReader.AppendText(line + url);
             TextBoxReader.AppendText(Environment.NewLine);
 
-
+            Thread.Sleep(1000);
 
          }
          catch (HttpListenerException ex)
