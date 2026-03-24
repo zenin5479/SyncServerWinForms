@@ -30,7 +30,7 @@ namespace SyncServerWinForms
             TextBoxReader.AppendText(line + url);
             TextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
-            //_textBoxReader.ScrollToCaret();
+            TextBoxReader.ScrollToCaret();
 
             ListBoxReader.Items.Add(line + url);
             ListBoxReader.Items.Add(Environment.NewLine);
