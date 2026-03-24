@@ -35,12 +35,12 @@ namespace SyncServerWinForms
             ListBoxReader.Items.Add(line + url);
             ListBoxReader.Items.Add(Environment.NewLine);
             // Прокрутка ListBox вниз
-            _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
+            ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
 
             RichTextBoxReader.AppendText("Синхронный Json сервер");
             RichTextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка RichTextBox вниз
-            _richTextBoxReader.ScrollToCaret();
+            RichTextBoxReader.ScrollToCaret();
 
             Thread.Sleep(1000);
          }
