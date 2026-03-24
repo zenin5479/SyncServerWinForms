@@ -33,7 +33,6 @@ namespace SyncServerWinForms
             ListBoxReader.Items.Add(Environment.NewLine);
 
             Thread.Sleep(1000);
-
          }
          catch (HttpListenerException ex)
          {
