@@ -31,8 +31,6 @@ namespace SyncServerWinForms
 
             ListBoxReader.Items.Add(line + url);
             ListBoxReader.Items.Add(Environment.NewLine);
-            ListBoxReader.Items.Add("Сервер запущен по адресу: " + _url);
-            ListBoxReader.Items.Add(Environment.NewLine);
 
             Thread.Sleep(1000);
 
