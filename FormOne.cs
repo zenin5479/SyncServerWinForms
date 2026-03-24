@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using System.Security.Policy;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
@@ -28,7 +27,7 @@ namespace SyncServerWinForms
             string line = "Синхронный Json сервер запущен по адресу: ";
             TextBoxReader.AppendText(line + url);
             TextBoxReader.AppendText(Environment.NewLine);
-           
+
          }
          catch (HttpListenerException ex)
          {
