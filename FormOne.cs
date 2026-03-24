@@ -28,6 +28,8 @@ namespace SyncServerWinForms
             TextBoxReader.AppendText(line + url);
             TextBoxReader.AppendText(Environment.NewLine);
 
+
+
          }
          catch (HttpListenerException ex)
          {
