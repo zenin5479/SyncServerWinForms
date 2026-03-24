@@ -33,7 +33,6 @@ namespace SyncServerWinForms
             TextBoxReader.ScrollToCaret();
 
             ListBoxReader.Items.Add(line + url);
-            ListBoxReader.Items.Add(Environment.NewLine);
             // Прокрутка ListBox вниз
             ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
 
