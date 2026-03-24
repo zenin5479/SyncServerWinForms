@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Security.Policy;
 using System.Threading;
 using System.Windows.Forms;
 
@@ -31,6 +32,11 @@ namespace SyncServerWinForms
 
             ListBoxReader.Items.Add(line + url);
             ListBoxReader.Items.Add(Environment.NewLine);
+
+            RichTextBoxReader.AppendText("Синхронный Json сервер");
+            _richTextBoxReader.AppendText(Environment.NewLine);
+            _richTextBoxReader.AppendText("Сервер запущен по адресу: " + _url);
+            _richTextBoxReader.AppendText(Environment.NewLine);
 
             Thread.Sleep(1000);
          }
