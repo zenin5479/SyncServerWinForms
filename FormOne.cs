@@ -21,6 +21,8 @@ namespace SyncServerWinForms
 
          ListBoxReader.Items.Add(lineone);
 
+         RichTextBoxReader.AppendText(line + url);
+
          string url = "http://127.0.0.1:8080/";
          // Создаём экземпляр класса и передаём ему ссылки на элементы управления
          SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader);
