@@ -25,7 +25,7 @@ namespace SyncServerWinForms
          try
          {
             server.Start();
-            string line = "Синхронный Json сервер запущен по адресу:";
+            string line = "Синхронный Json сервер запущен по адресу: ";
             TextBoxReader.AppendText(line + url);
             TextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
