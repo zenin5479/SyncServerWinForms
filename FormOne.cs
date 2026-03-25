@@ -2,6 +2,7 @@
 using System.Net;
 using System.Threading;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace SyncServerWinForms
 {
@@ -17,8 +18,9 @@ namespace SyncServerWinForms
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
          TextBoxReader.AppendText(Environment.NewLine);
-         // Прокрутка TextBox вниз
-         TextBoxReader.ScrollToCaret();
+
+         ListBoxReader.Items.Add(lineone);
+
          string url = "http://127.0.0.1:8080/";
          // Создаём экземпляр класса и передаём ему ссылки на элементы управления
          SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader);
@@ -32,7 +34,6 @@ namespace SyncServerWinForms
             TextBoxReader.ScrollToCaret();
 
             ListBoxReader.Items.Add(line + url);
-
             // Прокрутка ListBox вниз
             ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
 
