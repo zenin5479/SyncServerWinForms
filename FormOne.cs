@@ -67,7 +67,7 @@ namespace SyncServerWinForms
 
       private void ButtonStop_Click(object sender, EventArgs e)
       {
-         //SyncServer.Stop(); //
+         SyncServer.Stop();
       }
    }
 }
