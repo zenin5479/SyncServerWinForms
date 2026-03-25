@@ -5,6 +5,7 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
@@ -65,6 +66,8 @@ namespace SyncServerWinForms
             {
                HttpListenerContext context = _listener.GetContext();
                ProcessRequest(context);
+
+               Thread.Sleep(1000);
             }
          }
          catch (Exception ex)

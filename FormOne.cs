@@ -44,7 +44,7 @@ namespace SyncServerWinForms
             // Прокрутка RichTextBox вниз
             RichTextBoxReader.ScrollToCaret();
 
-            Thread.Sleep(1000);
+            //Thread.Sleep(1000);
          }
          catch (HttpListenerException ex)
          {
