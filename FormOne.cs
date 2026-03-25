@@ -36,7 +36,7 @@ namespace SyncServerWinForms
             // Прокрутка ListBox вниз
             ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
 
-            RichTextBoxReader.AppendText(line + "\n" + url);
+            RichTextBoxReader.AppendText(line + url);
             RichTextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка RichTextBox вниз
             RichTextBoxReader.ScrollToCaret();
