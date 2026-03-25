@@ -12,7 +12,7 @@ namespace SyncServerWinForms
 {
    public class SyncServer
    {
-      private HttpListener _listener;
+      private static HttpListener _listener;
       private string _url;
       private TextBox _textBoxReader;
       private ListBox _listBoxReader;
@@ -268,7 +268,7 @@ namespace SyncServerWinForms
          response.OutputStream.Write(buffer, 0, buffer.Length);
       }
 
-      public void Stop()
+      public static void Stop()
       {
          _listener.Stop();
          _listener.Close();
