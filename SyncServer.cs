@@ -59,18 +59,18 @@ namespace SyncServerWinForms
          _listener.Prefixes.Add(_url);
          _listener.Start();
 
-         //try
-         //{
-         //   while (true)
-         //   {
-         //      HttpListenerContext context = _listener.GetContext();
-         //      ProcessRequest(context);
-         //   }
-         //}
-         //catch (Exception ex)
-         //{
-         //   _textBoxReader.AppendText("Ошибка: " + ex.Message);
-         //}
+         try
+         {
+            while (true)
+            {
+               HttpListenerContext context = _listener.GetContext();
+               ProcessRequest(context);
+            }
+         }
+         catch (Exception ex)
+         {
+            _textBoxReader.AppendText("Ошибка: " + ex.Message);
+         }
       }
 
       private void ProcessRequest(HttpListenerContext context)
