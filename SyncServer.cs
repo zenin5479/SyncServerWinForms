@@ -4,9 +4,13 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net;
+using System.Reflection;
+using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
+using static System.Windows.Forms.LinkLabel;
 
 namespace SyncServerWinForms
 {
@@ -89,6 +93,15 @@ namespace SyncServerWinForms
          }
       }
 
+      private void Timer_Tick(object sender, EventArgs e)
+      {
+         // Здесь размещается код, который раньше был в бесконечном цикле
+         _counter++;
+         TextBoxReader.Text = $"Тиков: {_counter}";
+
+         _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
+         _textBoxReader.AppendText(Environment.NewLine);
+      }
 
 
 
