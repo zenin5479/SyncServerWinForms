@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Net;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
 {
    public partial class FormOne : Form
    {
+      private Timer timer;
+      private int counter = 0;
+
       public FormOne()
       {
          InitializeComponent();
@@ -44,7 +46,7 @@ namespace SyncServerWinForms
             // Прокрутка RichTextBox вниз
             RichTextBoxReader.ScrollToCaret();
 
-           
+
          }
          catch (HttpListenerException ex)
          {
