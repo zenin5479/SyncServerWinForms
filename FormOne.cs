@@ -22,7 +22,6 @@ namespace SyncServerWinForms
          timer.Tick += Timer_Tick;
          timer.Start();
 
-
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
          TextBoxReader.AppendText(Environment.NewLine);
@@ -71,7 +70,7 @@ namespace SyncServerWinForms
       {
          // Здесь размещается код, который раньше был в бесконечном цикле
          counter++;
-         Text = $"Тиков: {counter}";
+         Text = string.Format("Тиков: {0}", counter);
       }
 
       private void ButtonClear_Click(object sender, EventArgs e)
