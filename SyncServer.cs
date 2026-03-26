@@ -18,13 +18,16 @@ namespace SyncServerWinForms
       private ListBox _listBoxReader;
       private RichTextBox _richTextBoxReader;
       private List<Item> _items = new List<Item>();
+      private System.Windows.Forms.Timer _timer;
+      private int _counter = 0;
 
-      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
+      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader, System.Windows.Forms.Timer timer)
       {
          _url = url;
          _textBoxReader = textBoxReader;
          _listBoxReader = listBoxReader;
          _richTextBoxReader = richTextBoxReader;
+         _timer = timer;
       }
 
       // Запись логов
