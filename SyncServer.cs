@@ -93,7 +93,6 @@ namespace SyncServerWinForms
       {
          // Здесь размещается код, который раньше был в бесконечном цикле
          _counter++;
-         TextBoxReader.Text = $"Тиков: {_counter}";
 
          _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
          _textBoxReader.AppendText(Environment.NewLine);
