@@ -81,7 +81,7 @@ namespace SyncServerWinForms
             _textBoxReader.AppendText(Environment.NewLine);
 
             // Условие для остановки таймера (аналог break в while)
-            if (_counter >= 20)
+            if (_counter >= 15)
             {
                _timer.Stop();
                _textBoxReader.AppendText("Таймер остановлен");
