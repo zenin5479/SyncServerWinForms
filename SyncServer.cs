@@ -4,13 +4,9 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net;
-using System.Reflection;
-using System.Security.Policy;
 using System.Text;
 using System.Threading;
 using System.Windows.Forms;
-using static System.Net.Mime.MediaTypeNames;
-using static System.Windows.Forms.LinkLabel;
 
 namespace SyncServerWinForms
 {

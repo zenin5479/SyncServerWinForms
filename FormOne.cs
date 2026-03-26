@@ -6,6 +6,8 @@ namespace SyncServerWinForms
 {
    public partial class FormOne : Form
    {
+      private Timer timer;
+
       public FormOne()
       {
          InitializeComponent();
@@ -13,6 +15,10 @@ namespace SyncServerWinForms
 
       private void ButtonStart_Click(object sender, EventArgs e)
       {
+         // Создаём и настраиваем таймер
+            timer = new System.Windows.Forms.Timer();
+            timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
+         
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
          TextBoxReader.AppendText(Environment.NewLine);
@@ -24,9 +30,11 @@ namespace SyncServerWinForms
 
          string url = "http://127.0.0.1:8080/";
          // Создаём экземпляр класса и передаём ему ссылки на элементы управления
-         SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader);
+         SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader, timer);
          try
          {
+            
+
             server.Start();
             string line = "Синхронный Json сервер запущен по адресу: ";
             TextBoxReader.AppendText(line + url);
