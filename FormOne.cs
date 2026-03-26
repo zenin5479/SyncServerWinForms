@@ -6,7 +6,7 @@ namespace SyncServerWinForms
 {
    public partial class FormOne : Form
    {
-      private Timer timer;
+      private Timer _timer;
 
       public FormOne()
       {
@@ -16,8 +16,9 @@ namespace SyncServerWinForms
       private void ButtonStart_Click(object sender, EventArgs e)
       {
          // Создаём и настраиваем таймер
-         timer = new Timer();
-         timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
+         _timer = new Timer();
+         // Интервал в миллисекундах (1 секунда)
+         _timer.Interval = 1000;
 
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
@@ -30,7 +31,7 @@ namespace SyncServerWinForms
 
          string url = "http://127.0.0.1:8080/";
          // Создаём экземпляр класса и передаём ему ссылки на элементы управления
-         SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader, timer);
+         SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader, _timer);
          try
          {
             server.Start();
