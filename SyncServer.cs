@@ -95,10 +95,12 @@ namespace SyncServerWinForms
          _counter++;
          _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
          _textBoxReader.AppendText(Environment.NewLine);
+         HttpListenerContext context = _listener.GetContext();
+         ProcessRequest(context);
+
+         //Thread.Sleep(500);
+
       }
-
-
-
 
       private void ProcessRequest(HttpListenerContext context)
       {
