@@ -42,8 +42,6 @@ namespace SyncServerWinForms
             RichTextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка RichTextBox вниз
             RichTextBoxReader.ScrollToCaret();
-
-
          }
          catch (HttpListenerException ex)
          {
