@@ -73,13 +73,15 @@ namespace SyncServerWinForms
          {
             // Здесь размещается код, который раньше был в бесконечном цикле
             _counter++;
-            _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
-            _textBoxReader.AppendText(Environment.NewLine);
+            
             HttpListenerContext context = _listener.GetContext();
             ProcessRequest(context);
+            _textBoxReader.AppendText(Environment.NewLine);
+            _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
+            _textBoxReader.AppendText(Environment.NewLine);
 
             // Условие для остановки таймера (аналог break в while)
-            if (_counter >= 10)
+            if (_counter >= 20)
             {
                _timer.Stop();
                _textBoxReader.AppendText("Таймер остановлен");
