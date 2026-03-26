@@ -5,7 +5,6 @@ using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Text;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
@@ -18,16 +17,17 @@ namespace SyncServerWinForms
       private ListBox _listBoxReader;
       private RichTextBox _richTextBoxReader;
       private List<Item> _items = new List<Item>();
-      private System.Windows.Forms.Timer _timer;
-      private int _counter = 0;
+      private Timer _timer;
+      private int _counter;
 
-      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader, System.Windows.Forms.Timer timer)
+      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader, Timer timer, int counter)
       {
          _url = url;
          _textBoxReader = textBoxReader;
          _listBoxReader = listBoxReader;
          _richTextBoxReader = richTextBoxReader;
          _timer = timer;
+         _counter = counter;
       }
 
       // Запись логов
@@ -63,43 +63,26 @@ namespace SyncServerWinForms
          _listener.Prefixes.Add(_url);
          _listener.Start();
 
-         // Создаём и настраиваем таймер
-         _timer = new System.Windows.Forms.Timer();
-         _timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
          _timer.Tick += Timer_Tick;
+         _counter = 0;
          _timer.Start();
+      }
 
-
+      private void Timer_Tick(object sender, EventArgs e)
+      {
          try
          {
-
-
-
-            while (true)
-            {
-               HttpListenerContext context = _listener.GetContext();
-               ProcessRequest(context);
-
-               Thread.Sleep(500);
-            }
+            // Здесь размещается код, который раньше был в бесконечном цикле
+            _counter++;
+            _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
+            _textBoxReader.AppendText(Environment.NewLine);
+            HttpListenerContext context = _listener.GetContext();
+            ProcessRequest(context);
          }
          catch (Exception ex)
          {
             _textBoxReader.AppendText("Ошибка: " + ex.Message);
          }
-      }
-
-      private void Timer_Tick(object sender, EventArgs e)
-      {
-         // Здесь размещается код, который раньше был в бесконечном цикле
-         _counter++;
-         _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
-         _textBoxReader.AppendText(Environment.NewLine);
-         HttpListenerContext context = _listener.GetContext();
-         ProcessRequest(context);
-
-         //Thread.Sleep(500);
-
       }
 
       private void ProcessRequest(HttpListenerContext context)
