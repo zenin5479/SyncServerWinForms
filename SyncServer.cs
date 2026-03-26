@@ -20,14 +20,13 @@ namespace SyncServerWinForms
       private Timer _timer;
       private int _counter;
 
-      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader, Timer timer, int counter)
+      public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader, Timer timer)
       {
          _url = url;
          _textBoxReader = textBoxReader;
          _listBoxReader = listBoxReader;
          _richTextBoxReader = richTextBoxReader;
          _timer = timer;
-         _counter = counter;
       }
 
       // Запись логов
