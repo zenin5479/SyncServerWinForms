@@ -6,6 +6,7 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
+using System.Timers;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
@@ -18,6 +19,9 @@ namespace SyncServerWinForms
       private ListBox _listBoxReader;
       private RichTextBox _richTextBoxReader;
       private List<Item> _items = new List<Item>();
+
+      private Timer timer;
+      private int counter = 0;
 
       public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
       {
@@ -59,6 +63,11 @@ namespace SyncServerWinForms
          _listener = new HttpListener();
          _listener.Prefixes.Add(_url);
          _listener.Start();
+
+         // Создаём и настраиваем таймер
+         timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
+         timer.Tick += Timer_Tick;
+         timer.Start();
 
          try
          {
