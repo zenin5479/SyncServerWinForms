@@ -20,8 +20,7 @@ namespace SyncServerWinForms
       private RichTextBox _richTextBoxReader;
       private List<Item> _items = new List<Item>();
 
-      private Timer timer;
-      private int counter = 0;
+
 
       public SyncServer(string url, TextBox textBoxReader, ListBox listBoxReader, RichTextBox richTextBoxReader)
       {
@@ -65,6 +64,9 @@ namespace SyncServerWinForms
          _listener.Start();
 
          // Создаём и настраиваем таймер
+         Timer timer= new Timer();
+         int counter = 0;
+
          timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
          timer.Tick += Timer_Tick;
          timer.Start();

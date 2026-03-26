@@ -1,14 +1,12 @@
 ﻿using System;
 using System.Net;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
 {
    public partial class FormOne : Form
    {
-      private Timer timer;
-      private int counter = 0;
-
       public FormOne()
       {
          InitializeComponent();
@@ -16,12 +14,6 @@ namespace SyncServerWinForms
 
       private void ButtonStart_Click(object sender, EventArgs e)
       {
-         // Создаём и настраиваем таймер
-         timer = new Timer();
-         timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
-         timer.Tick += Timer_Tick;
-         timer.Start();
-
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
          TextBoxReader.AppendText(Environment.NewLine);
@@ -52,7 +44,7 @@ namespace SyncServerWinForms
             // Прокрутка RichTextBox вниз
             RichTextBoxReader.ScrollToCaret();
 
-
+           
          }
          catch (HttpListenerException ex)
          {
@@ -64,13 +56,6 @@ namespace SyncServerWinForms
             string line = "Ошибка: ";
             TextBoxReader.AppendText(line + ex.Message);
          }
-      }
-
-      private void Timer_Tick(object sender, EventArgs e)
-      {
-         // Здесь размещается код, который раньше был в бесконечном цикле
-         counter++;
-         Text = string.Format("Тиков: {0}", counter);
       }
 
       private void ButtonClear_Click(object sender, EventArgs e)
