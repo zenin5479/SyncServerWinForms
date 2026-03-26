@@ -6,7 +6,6 @@ using System.IO;
 using System.Net;
 using System.Text;
 using System.Threading;
-using System.Timers;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
