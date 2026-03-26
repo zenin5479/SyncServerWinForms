@@ -63,8 +63,18 @@ namespace SyncServerWinForms
          _listener.Prefixes.Add(_url);
          _listener.Start();
 
+         // Создаём и настраиваем таймер
+         _timer = new System.Windows.Forms.Timer();
+         _timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
+         _timer.Tick += Timer_Tick;
+         _timer.Start();
+
+
          try
          {
+
+
+
             while (true)
             {
                HttpListenerContext context = _listener.GetContext();
@@ -78,6 +88,10 @@ namespace SyncServerWinForms
             _textBoxReader.AppendText("Ошибка: " + ex.Message);
          }
       }
+
+
+
+
 
       private void ProcessRequest(HttpListenerContext context)
       {
