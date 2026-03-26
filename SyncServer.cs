@@ -73,7 +73,7 @@ namespace SyncServerWinForms
          {
             // Здесь размещается код, который раньше был в бесконечном цикле
             _counter++;
-            
+
             HttpListenerContext context = _listener.GetContext();
             ProcessRequest(context);
             _textBoxReader.AppendText(Environment.NewLine);
