@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Net;
-using System.Threading;
 using System.Windows.Forms;
 
 namespace SyncServerWinForms
@@ -44,7 +43,7 @@ namespace SyncServerWinForms
             // Прокрутка RichTextBox вниз
             RichTextBoxReader.ScrollToCaret();
 
-           
+
          }
          catch (HttpListenerException ex)
          {

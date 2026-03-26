@@ -64,7 +64,7 @@ namespace SyncServerWinForms
          _listener.Start();
 
          // Создаём и настраиваем таймер
-         Timer timer= new Timer();
+         Timer timer = new Timer();
          int counter = 0;
 
          timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
