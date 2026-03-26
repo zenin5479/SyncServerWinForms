@@ -77,6 +77,14 @@ namespace SyncServerWinForms
             _textBoxReader.AppendText(Environment.NewLine);
             HttpListenerContext context = _listener.GetContext();
             ProcessRequest(context);
+
+            // Условие для остановки таймера (аналог break в while)
+            if (_counter >= 10)
+            {
+               _timer.Stop();
+               _textBoxReader.AppendText("Таймер остановлен");
+               _textBoxReader.AppendText(Environment.NewLine);
+            }
          }
          catch (Exception ex)
          {
