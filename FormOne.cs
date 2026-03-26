@@ -16,9 +16,9 @@ namespace SyncServerWinForms
       private void ButtonStart_Click(object sender, EventArgs e)
       {
          // Создаём и настраиваем таймер
-            timer = new System.Windows.Forms.Timer();
-            timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
-         
+         timer = new Timer();
+         timer.Interval = 1000; // Интервал в миллисекундах (1 секунда)
+
          string lineone = "Проверка связи";
          TextBoxReader.AppendText(lineone);
          TextBoxReader.AppendText(Environment.NewLine);
@@ -33,8 +33,6 @@ namespace SyncServerWinForms
          SyncServer server = new SyncServer(url, TextBoxReader, ListBoxReader, RichTextBoxReader, timer);
          try
          {
-            
-
             server.Start();
             string line = "Синхронный Json сервер запущен по адресу: ";
             TextBoxReader.AppendText(line + url);
