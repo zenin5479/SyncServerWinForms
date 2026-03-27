@@ -86,8 +86,8 @@ namespace SyncServerWinForms
                _textBoxReader.AppendText("Таймер остановлен");
                _textBoxReader.AppendText(Environment.NewLine);
 
-               _listener.Stop();
-               _listener.Close();
+               //_listener.Stop();
+               //_listener.Close();
             }
          }
          catch (Exception ex)
