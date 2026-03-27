@@ -79,7 +79,7 @@ namespace SyncServerWinForms
             _textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
             _textBoxReader.AppendText(Environment.NewLine);
 
-            // Условие для остановки таймера (аналог break в while)
+            // Условие для остановки таймера
             if (_counter >= 15)
             {
                _timer.Stop();
