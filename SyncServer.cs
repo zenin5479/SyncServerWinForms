@@ -71,7 +71,6 @@ namespace SyncServerWinForms
       {
          try
          {
-            // Здесь размещается код, который раньше был в бесконечном цикле
             _counter++;
 
             HttpListenerContext context = _listener.GetContext();
