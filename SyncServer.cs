@@ -290,8 +290,8 @@ namespace SyncServerWinForms
 
       public static void Stop()
       {
-         //_listener.Stop();
-         //_listener.Close();
+         _listener.Stop();
+         _listener.Close();
       }
    }
 }
