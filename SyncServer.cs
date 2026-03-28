@@ -107,13 +107,6 @@ namespace SyncServerWinForms
             // Прокрутка TextBox вниз
             //_textBoxReader.ScrollToCaret();
 
-
-            _listBoxReader = listBoxReader;
-
-            _richTextBoxReader = richTextBoxReader;
-
-
-
             _listBoxReader.Items.Add(request.HttpMethod + request.Url.AbsolutePath);
             // Прокрутка ListBox вниз
             _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
