@@ -109,7 +109,7 @@ namespace SyncServerWinForms
 
             _listBoxReader.Items.Add(request.HttpMethod + request.Url.AbsolutePath);
             // Прокрутка ListBox вниз
-            _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
+            //_listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
 
             _richTextBoxReader.AppendText(line + url);
             _richTextBoxReader.AppendText(Environment.NewLine);
