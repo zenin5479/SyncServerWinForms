@@ -56,7 +56,6 @@ namespace SyncServerWinForms
                // Прокрутка TextBox вниз
                _textBoxReader.ScrollToCaret();
 
-
                _listBoxReader.Items.Add("Запросы к серверу завершены");
                // Прокрутка ListBox вниз
                _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
