@@ -63,6 +63,8 @@ namespace SyncServerWinForms
 
                _richTextBoxReader.AppendText("Запросы к серверу завершены");
                _richTextBoxReader.AppendText(Environment.NewLine);
+               // Прокрутка RichTextBox вниз
+               _richTextBoxReader.ScrollToCaret();
             }
          }
          catch (Exception ex)
