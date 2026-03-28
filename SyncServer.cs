@@ -85,9 +85,6 @@ namespace SyncServerWinForms
                _timer.Stop();
                _textBoxReader.AppendText("Таймер остановлен");
                _textBoxReader.AppendText(Environment.NewLine);
-
-               //_listener.Stop();
-               //_listener.Close();
             }
          }
          catch (Exception ex)
@@ -103,7 +100,7 @@ namespace SyncServerWinForms
          try
          {
             _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
-            //_textBoxReader.AppendText(Environment.NewLine);
+            _textBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
             _textBoxReader.ScrollToCaret();
 
