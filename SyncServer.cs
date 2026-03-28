@@ -75,7 +75,7 @@ namespace SyncServerWinForms
 
             HttpListenerContext context = _listener.GetContext();
             ProcessRequest(context);
-            _textBoxReader.AppendText(Environment.NewLine);
+            //_textBoxReader.AppendText(Environment.NewLine);
             //_textBoxReader.AppendText(string.Format("Тиков: {0}", _counter));
             //_textBoxReader.AppendText(Environment.NewLine);
 
@@ -103,6 +103,7 @@ namespace SyncServerWinForms
          try
          {
             _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
+            //_textBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
             _textBoxReader.ScrollToCaret();
 
