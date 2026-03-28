@@ -106,6 +106,7 @@ namespace SyncServerWinForms
             _textBoxReader.AppendText(Environment.NewLine);
 
             _listBoxReader = listBoxReader;
+
             _richTextBoxReader = richTextBoxReader;
 
             TextBoxReader.AppendText(line + url);
