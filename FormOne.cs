@@ -66,14 +66,11 @@ namespace SyncServerWinForms
             RichTextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка RichTextBox вниз
             RichTextBoxReader.ScrollToCaret();
-
          }
          catch (Exception ex)
          {
             string line = "Ошибка: ";
             TextBoxReader.AppendText(line + ex.Message);
-
-            TextBoxReader.AppendText(line + url);
             TextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
             TextBoxReader.ScrollToCaret();
