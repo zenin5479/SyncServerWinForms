@@ -83,13 +83,9 @@ namespace SyncServerWinForms
                _textBoxReader.AppendText(Environment.NewLine);
 
                _listBoxReader.Items.Add("Запросы к серверу завершены");
-               // Прокрутка ListBox вниз
-               _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
 
                _richTextBoxReader.AppendText("Запросы к серверу завершены");
                _richTextBoxReader.AppendText(Environment.NewLine);
-               // Прокрутка RichTextBox вниз
-               _richTextBoxReader.ScrollToCaret();
             }
          }
          catch (Exception ex)
