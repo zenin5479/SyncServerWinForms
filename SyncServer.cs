@@ -104,16 +104,16 @@ namespace SyncServerWinForms
          {
             _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
             _textBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка TextBox вниз
+            _textBoxReader.ScrollToCaret();
+
 
             _listBoxReader = listBoxReader;
 
             _richTextBoxReader = richTextBoxReader;
 
-            TextBoxReader.AppendText(line + url);
 
-            // Прокрутка TextBox вниз
-            TextBoxReader.ScrollToCaret();
-
+           
             ListBoxReader.Items.Add(line + url);
             // Прокрутка ListBox вниз
             ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
