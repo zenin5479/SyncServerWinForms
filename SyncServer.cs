@@ -114,7 +114,7 @@ namespace SyncServerWinForms
             _richTextBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
             _richTextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка RichTextBox вниз
-            _richTextBoxReader.ScrollToCaret();
+            //_richTextBoxReader.ScrollToCaret();
 
             if (request.HttpMethod == "GET")
             {
