@@ -1,7 +1,6 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.IO;
 using System.Net;
 using System.Text;
@@ -27,33 +26,6 @@ namespace SyncServerWinForms
          _listBoxReader = listBoxReader;
          _richTextBoxReader = richTextBoxReader;
          _timer = timer;
-      }
-
-      // Запись логов
-      private void Savelog(string tolog, Color color)
-      {
-         // TextBox
-         // Добавляет строку оставляя предыдущие
-         //_textBoxReader.AppendText(tolog);
-         //_textBoxReader.AppendText(Environment.NewLine);
-         // Прокрутка TextBox вниз
-         //_textBoxReader.ScrollToCaret();
-
-         //_textBoxReader.SelectionColor = color;
-         _textBoxReader.AppendText(tolog);
-         _textBoxReader.ScrollToCaret();
-
-         // ListBox
-         _listBoxReader.Items.Add(tolog);
-         // Прокрутка ListBox вниз
-         _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
-
-         // RichTextBox
-         _richTextBoxReader.SelectionColor = color;
-         _richTextBoxReader.AppendText(tolog);
-         _richTextBoxReader.AppendText(Environment.NewLine);
-         // Прокрутка RichTextBox вниз
-         _richTextBoxReader.ScrollToCaret();
       }
 
       public void Start()
