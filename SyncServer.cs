@@ -105,7 +105,7 @@ namespace SyncServerWinForms
             _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
             _textBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
-            _textBoxReader.ScrollToCaret();
+            //_textBoxReader.ScrollToCaret();
 
 
             _listBoxReader = listBoxReader;
@@ -113,10 +113,10 @@ namespace SyncServerWinForms
             _richTextBoxReader = richTextBoxReader;
 
 
-           
-            ListBoxReader.Items.Add(line + url);
+
+            _listBoxReader.Items.Add(request.HttpMethod + request.Url.AbsolutePath);
             // Прокрутка ListBox вниз
-            ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
+            _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
 
             RichTextBoxReader.AppendText(line + url);
             RichTextBoxReader.AppendText(Environment.NewLine);
