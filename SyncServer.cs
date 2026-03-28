@@ -112,7 +112,7 @@ namespace SyncServerWinForms
             _listBoxReader.TopIndex = _listBoxReader.Items.Count - 1;
 
             _richTextBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
-            //_richTextBoxReader.AppendText(Environment.NewLine);
+            _richTextBoxReader.AppendText(Environment.NewLine);
             // Прокрутка RichTextBox вниз
             _richTextBoxReader.ScrollToCaret();
 
