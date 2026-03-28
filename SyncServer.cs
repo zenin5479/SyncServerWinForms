@@ -116,7 +116,6 @@ namespace SyncServerWinForms
             // Прокрутка RichTextBox вниз
             _richTextBoxReader.ScrollToCaret();
 
-
             if (request.HttpMethod == "GET")
             {
                HandleGet(request, response);
