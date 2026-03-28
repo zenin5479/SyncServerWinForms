@@ -79,7 +79,7 @@ namespace SyncServerWinForms
             if (_counter >= 15)
             {
                _timer.Stop();
-               _textBoxReader.AppendText("Таймер остановлен");
+               _textBoxReader.AppendText("Запросы к серверу завершены");
                _textBoxReader.AppendText(Environment.NewLine);
 
                _listBoxReader.Items.Add(request.HttpMethod + request.Url.AbsolutePath);
