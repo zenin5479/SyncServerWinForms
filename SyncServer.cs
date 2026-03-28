@@ -72,7 +72,6 @@ namespace SyncServerWinForms
          try
          {
             _counter++;
-
             HttpListenerContext context = _listener.GetContext();
             ProcessRequest(context);
             //_textBoxReader.AppendText(Environment.NewLine);
