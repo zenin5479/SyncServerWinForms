@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace SyncServerWinForms
 {
@@ -103,6 +105,25 @@ namespace SyncServerWinForms
          try
          {
             _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
+
+            _listBoxReader = listBoxReader;
+            _richTextBoxReader = richTextBoxReader;
+
+            TextBoxReader.AppendText(line + url);
+            TextBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка TextBox вниз
+            TextBoxReader.ScrollToCaret();
+
+            ListBoxReader.Items.Add(line + url);
+            // Прокрутка ListBox вниз
+            ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
+
+            RichTextBoxReader.AppendText(line + url);
+            RichTextBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка RichTextBox вниз
+            RichTextBoxReader.ScrollToCaret();
+
+
             if (request.HttpMethod == "GET")
             {
                HandleGet(request, response);
