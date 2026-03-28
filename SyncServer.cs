@@ -4,10 +4,8 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Net;
-using System.Security.Policy;
 using System.Text;
 using System.Windows.Forms;
-using static System.Windows.Forms.LinkLabel;
 
 namespace SyncServerWinForms
 {
@@ -105,12 +103,13 @@ namespace SyncServerWinForms
          try
          {
             _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
+            _textBoxReader.AppendText(Environment.NewLine);
 
             _listBoxReader = listBoxReader;
             _richTextBoxReader = richTextBoxReader;
 
             TextBoxReader.AppendText(line + url);
-            TextBoxReader.AppendText(Environment.NewLine);
+
             // Прокрутка TextBox вниз
             TextBoxReader.ScrollToCaret();
 
