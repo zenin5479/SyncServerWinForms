@@ -103,7 +103,6 @@ namespace SyncServerWinForms
          try
          {
             _textBoxReader.AppendText(request.HttpMethod + request.Url.AbsolutePath);
-            //_textBoxReader.AppendText(Environment.NewLine);
             // Прокрутка TextBox вниз
             _textBoxReader.ScrollToCaret();
 
