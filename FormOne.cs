@@ -54,11 +54,40 @@ namespace SyncServerWinForms
          {
             string line = "Не удалось запустить сервер: ";
             TextBoxReader.AppendText(line + ex.Message);
+
+            TextBoxReader.AppendText(line + url);
+            TextBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка TextBox вниз
+            TextBoxReader.ScrollToCaret();
+
+            ListBoxReader.Items.Add(line + url);
+            // Прокрутка ListBox вниз
+            ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
+
+            RichTextBoxReader.AppendText(line + url);
+            RichTextBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка RichTextBox вниз
+            RichTextBoxReader.ScrollToCaret();
+
          }
          catch (Exception ex)
          {
             string line = "Ошибка: ";
             TextBoxReader.AppendText(line + ex.Message);
+
+            TextBoxReader.AppendText(line + url);
+            TextBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка TextBox вниз
+            TextBoxReader.ScrollToCaret();
+
+            ListBoxReader.Items.Add(line + url);
+            // Прокрутка ListBox вниз
+            ListBoxReader.TopIndex = ListBoxReader.Items.Count - 1;
+
+            RichTextBoxReader.AppendText(line + url);
+            RichTextBoxReader.AppendText(Environment.NewLine);
+            // Прокрутка RichTextBox вниз
+            RichTextBoxReader.ScrollToCaret();
          }
       }
 
